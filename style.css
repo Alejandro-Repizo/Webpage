@@ -1,0 +1,249 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    color: #fff;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #FAFAFA;
+  
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: normal;
+}
+
+/* Header*/
+header{
+   display: flex;
+   justify-content: center;
+   background-color: #1B2127;
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1B2127;
+    padding: 21px;
+    width: 1000px;
+    height: 30px;
+}
+
+header div nav ol li {
+    display: inline-block;
+    padding: 10px;
+}
+
+/* Banner*/
+
+.hero{
+    background-color: #1B2127;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    margin-bottom: 40px;
+}
+.container-portafolio{
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-portafolio img{
+    object-fit: cover;
+}
+
+.hero h1{
+    font-size: 40px;
+    color: white;
+    
+}
+.hero h1 strong{
+    color: #026FFF;
+    font-weight: normal;
+}
+.container{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+   
+}
+
+/* Portafolio*/
+
+#portafolio{
+    margin-bottom: 20px;
+}
+
+.title{
+    text-transform: uppercase;
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 40px 0px 40px 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.project-details{
+    margin-top: -40px;
+}
+
+.project{
+    height: 400px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.project-title{
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10px
+}
+
+.project-course, .project-data, .project-url{
+    margin: 10px 0;
+}
+
+.project-description{
+    font-size: 20px;
+}
+
+
+/**/
+
+.event-image{
+    width: 480px;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.event-detail{
+    text-align: center;
+    margin: 20px 40px;
+    margin-top: -40px;
+    background-color: #fff;
+    position: relative;
+    padding: 20px;
+    width: 360px;
+}
+
+.event-description{
+    margin: 20px 0px 20px 0px;
+}
+
+.event-url{
+    border: 1px solid #056FFF;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: #056FFF;
+    margin-top: 20px;
+}
+.event-url:hover{
+    color: #056FFF;
+}
+
+.sub-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    
+}
+
+/**/
+
+.contact{
+    background-color: #056FFF;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.form-email{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-email h3{
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.form-email input{
+    border-color: gray;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px 20px 10px 25px;
+    background-image: url('images/envelope.svg');
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 5px;
+    margin-top: 15px;
+}
+
+.contact-button{
+    margin-top: 10px;
+    border: 2px solid gray;
+    border-top-color: #fff;
+    border-left-color: #fff;
+    padding: 10px 0;
+    background: transparent;
+    border-radius: 5px;
+    width: 100px;
+    color: #fff;
+}
+
+.social-link{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    background-size: 50px 50px;
+
+}
+
+.social-link.twitter{
+    background-image: url('images/índice.png');
+}
+.social-link.facebook{
+    background-image: url('images/facebook.png');
+}
+.social-link.github{
+    background-image: url('images/github.png');
+}
+.social-link.instagram{
+    background-image: url('images/instagram.png');
+}
+
+.sub-cont{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
