@@ -50,6 +50,7 @@ header div nav ol li {
 .hero{
     background-color: #1B2127;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     height: auto;
     margin-bottom: 40px;
@@ -58,7 +59,7 @@ header div nav ol li {
     width: 1000px;
     height: 300px;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
 }
@@ -77,7 +78,8 @@ header div nav ol li {
     font-weight: normal;
 }
 .container{
-    width: 1000px;
+    max-width: 1000px;
+    flex: 1;
     height: auto;
     margin: 0 auto;
    
@@ -100,13 +102,24 @@ header div nav ol li {
 
 .project-details{
     margin-top: -40px;
+    width: 50%;
+
+}
+.project-image-container{
+    width: 50%;
+
+}
+
+.project-image{
+    max-width: 100%;
+    width: 100%;
 }
 
 .project{
     height: 400px;
     border: 1px solid gray;
     border-radius: 10px;
-    display: flex;
+    display: flex; 
     flex-direction: row;
     align-items: center;
     padding: 20px;
@@ -131,7 +144,7 @@ header div nav ol li {
 /**/
 
 .event-image{
-    width: 480px;
+    width: 100%;
     height: 200px;
     object-fit: cover;
     border-top-left-radius: 10px;
@@ -145,7 +158,6 @@ header div nav ol li {
     background-color: #fff;
     position: relative;
     padding: 20px;
-    width: 360px;
 }
 
 .event-description{
@@ -167,7 +179,10 @@ header div nav ol li {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    
+}
+.event{
+    width: 47%;
+    margin: 1%;
 }
 
 /**/
@@ -177,6 +192,7 @@ header div nav ol li {
     height: 150px;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -222,10 +238,12 @@ header div nav ol li {
     height: 50px;
     margin: 0 10px;
     background-size: 50px 50px;
-
+    
 }
-
-.social-link.twitter{
+ .iconos{
+    font-size: 50px;
+ }
+/* .social-link.twitter{
     background-image: url('images/índice.png');
 }
 .social-link.facebook{
@@ -236,14 +254,219 @@ header div nav ol li {
 }
 .social-link.instagram{
     background-image: url('images/instagram.png');
-}
+} */
 
 .sub-cont{
     width: 1000px;
-    height: auto;
-    margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; 
+}
+
+.burger-button{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: rgba(27, 33, 39, .8);
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    position: fixed;
+    z-index: 4;
+    left: 5px;
+    top: 25px;
+    color: #fff;
+    display: none;
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 1024px){
+    .container{
+        padding: 0 1em;
+    }
+    .form-email{
+        padding: 0 1em;
+    }
+    /***/
+    .hero{
+        height: auto;
+        position:relative;
+    }
+    .hero h1{
+        font-size: 2em;
+        z-index: 2;
+        overflow: hidden;
+        padding: 0 20px;
+    }
+    .container-portafolio img{
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        object-position: 25% 25%;
+    }
+
+}
+
+@media screen and (max-width:767px){
+  
+    header div{
+        display: block;
+        height: auto;
+        text-align: center;
+    }
+    header div nav ol li{
+        display: block;
+    }
+    
+    header div nav ol li a {
+        height: 40px;
+        font-size: 1.2em;
+        margin-bottom: .5em;
+    }
+    header div nav{
+        position: fixed;
+        background-color:rgba(27, 33, 39, .8);
+        z-index: 3;
+        top: 0;
+        left: -100vw; /* Para que el menu se oculte a la izquierda y se cree el efecto al hacer click*/
+        width: 100vw; 
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .3s;
+
+    }
+    header div nav.is-active{
+        left: 0;
+    }
+
+    .project{
+        display: block;
+        height: auto;
+    }
+    .project-image-container{
+        width: auto;
+        text-align: center;
+    }
+    .project-image{
+        width: 70%;
+    }
+    .project-details{
+        width: auto;
+        margin-top: 0;
+        font-size: 20px;
+    }
+    
+    .project-title{
+        font-size: 1.5em;
+    }
+    .project-url{
+        font-size: 1em;
+    }
+    .project-course{
+        font-size: 1em;
+    }
+    .project-data{
+        font-size: 1em;
+    }
+    .project-description{
+        font-size: 1em;
+    }
+    /***/
+    .event{
+        width: 100%;
+        
+    }
+    .event-image{
+        object-position: 25% 25%;
+    }
+    .event-description{
+        font-size: .8em;
+    }
+    .event-title{
+        font-size: 1em;
+    }
+    .event-url{
+        font-size: .8em;
+    }
+    /***/
+    .contact{
+        height: auto;
+        padding: 1.5em 0;
+        display: flex;
+    }
+    .sub-cont{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .form-email{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .contact-button{
+        font-size: .8em;
+        padding: .1em auto;
+    }
+    /**/
+    .iconos{
+        font-size: 2.5em;
+    }
+    
+    /***/
+    .burger-button{
+        display: block;
+    }
+
+    .title{
+        font-size: 1.3em;
+    }
+}
+   
+
+@media screen and (max-width: 480px){
+    .project-details{
+        font-size: 14px;
+    }
+    .project-image{
+        width: 100%;
+    }
+    .event-detail{
+        margin: 20px 10px;
+        margin-top: -40px;
+      
+    }
+    .hero h1{
+        font-size: 1.7em;
+    }
+   
+   
+
+
+}
+
+@media screen and (max-width: 320px){
+    .hero h1{
+        font-size: 1.2em;
+        margin: 0 auto;
+        text-shadow: 1px 2px 2px #000;
+    }
+    .container-portafolio img{
+        filter: opacity(80%) blur(1px);
+    }
+     .title{
+        font-size: 1em;
+    }
     
 }

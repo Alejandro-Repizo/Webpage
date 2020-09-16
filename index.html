@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="media.css" media="screen and (max-width:768px)"> -->
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/f89bfe8215.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
+    <div class="burger-button" id="burger-button">
+        <i class="fas fa-bars"></i>
+    </div>
+   
     <header>
         <div>
             <figure class="logo">
                 <img src="images/logo.png" alt="logo" widht="190" height="50px">
             </figure>
-            <nav>
+            <nav id='nav'>
                 <ol>
                     <li>
                         <a href="#portafolio">Portafolio</a>
@@ -59,7 +64,7 @@
                 </div>
                 <figure class="project-image-container">
                     <img class="project-image" src="images/platzi-video-react-native.png" alt="logo" width="500"
-                        height="380">
+                       >
                 </figure>
             </article>
         </div>
@@ -82,7 +87,7 @@
                 </div>
                 <figure class="project-image-container">
                     <img class="project-image" src="images/platzi-video-react-native.png" alt="logo" width="500"
-                        height="380">
+                      >
                 </figure>
             </article>
         </div>
@@ -91,7 +96,6 @@
         <div class="container">
             <h2 class="title">M&aacute;s sobre mi Experiencia</h2>
             <div class="sub-container">
-
                 <article class="event">
                     <figure>
                         <img class="event-image" src="images/platzi-conf.jpg" alt="images" height="300" width="500">
@@ -157,10 +161,10 @@
                 
 
                 <div class="social">
-                    <a href="" class="social-link twitter"></a>
-                    <a href="" class="social-link facebook"></a>
-                    <a href="" class="social-link github"></a>
-                    <a href="" class="social-link instagram"></a>
+                    <a href="" class="social-link"><i class="iconos fab fa-facebook"></i></a>
+                    <a href="" class="social-link"><i class="iconos fab fa-twitter"></i></a>
+                    <a href="" class="social-link"><i class="iconos fab fa-github"></i></a>
+                    <a href="" class="social-link"><i class="iconos fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -169,6 +173,33 @@
     <footer>
 
     </footer>
+    <script>
+        
+        const query = window.matchMedia('screen and (max-width : 767px)');
+       
+        query.addListener(Validition);
+        Validition(query);
+
+        function Validition(event) {  
+            if(event.matches){
+                document.getElementById('burger-button').addEventListener('click', function () {
+                    document.getElementById('nav').classList.toggle('is-active');
+                });
+                document.getElementById('nav').addEventListener('click', function(){
+                    document.getElementById('nav').classList.remove('is-active');
+                });
+            }else{
+                document.getElementById('burger-button').addEventListener('click', function () {
+                    document.getElementById('nav').classList.toggle('is-active');
+                });
+                document.getElementById('nav').addEventListener('click', function(){
+                    document.getElementById('nav').classList.remove('is-active');
+                });
+            }
+        };
+
+        
+    </script>
 </body>
 
 </html>
